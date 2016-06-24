@@ -49,11 +49,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(vi-mode)
 
 # User configuration
 
-  export PATH="/home/tao/bin:/usr/lib/jvm/java-8u77-sun/bin:/usr/lib/jvm/java-8u77-sun/bin:/home/tao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin"
+  export PATH="/home/tao/bin:/usr/lib/jvm/java-8u77-sun/bin:/usr/lib/jvm/java-8u77-sun/bin:/home/tao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin:/home/tao/Android/Sdk/platform-tools"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
