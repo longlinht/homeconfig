@@ -25,11 +25,15 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
+     c-c++
+     python
+     java
      emacs-lisp
      git
      markdown
      org
      (shell :variables
+             shell-default-shell 'shell
              shell-default-height 30
              shell-default-position 'bottom)
      ;;spell-checking
@@ -248,7 +252,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+  (setq-default evil-search-module 'evil-search)
+)
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
