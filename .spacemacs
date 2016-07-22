@@ -26,6 +26,8 @@ values."
      auto-completion
      better-defaults
      c-c++
+     gtags
+     cscope
      python
      java
      emacs-lisp
@@ -33,7 +35,6 @@ values."
      markdown
      org
      (shell :variables
-             shell-default-shell 'shell
              shell-default-height 30
              shell-default-position 'bottom)
      ;;spell-checking
