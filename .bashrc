@@ -201,8 +201,8 @@ fi
 
 set -o vi
 
-#export JAVA_HOME=/usr/lib/jvm/jdk1.5.0_22
-export JAVA_HOME=/usr/lib/jvm/java-8u77-sun
+export JAVA_HOME=/usr/lib/jvm/jdk1.5.0_22
+#export JAVA_HOME=/usr/lib/jvm/java-8u77-sun
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH:~/android_source/out/host/linux-x86/bin:$HOME/android-sdk-linux/platform-tools/

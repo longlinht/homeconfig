@@ -1,5 +1,15 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/tao/.oh-my-zsh
+  
+# environment variables often used.
+
+export qqi=/sdcard/tencent/QQ_Images/
+export qqf=/sdcard/tencent/QQfile_recv/
+export trunk=http://10.60.81.25/svn/myandroid/trunk/dev_webview/trunk
+export myb=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/tao_dev
+export mb=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/tao_dev
+export x5=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/dev_cmb_x5
+export st=/home/tao/template_svn
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,11 +59,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode)
+plugins=(vi-mode svn adb)
 
 # User configuration
 
-export PATH="/home/tao/bin:/usr/lib/jvm/java-8u77-sun/bin:/usr/lib/jvm/java-8u77-sun/bin:/home/tao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin:/home/tao/android_source/out/host/linux-x86/bin:/home/tao/go/bin:/home/tao/android-sdk-linux/platform-tools"
+export JAVA_HOME=/usr/lib/jvm/jdk1.5.0_22
+#export JAVA_HOME=/usr/lib/jvm/java-8u77-sun
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH:$HOME/android-sdk-linux/platform-tools/:~/android_source/out/host/linux-x86/bin
+export ANDROID_PRODUCT_OUT=~/android_source/out/target/product/generic
+export GOROOT=$HOME/go
+export PATH=$PATH:~/android_source/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
