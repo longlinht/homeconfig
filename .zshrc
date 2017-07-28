@@ -1,20 +1,23 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Library/Android/sdk/platform-tools:$PATH
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/tao/.oh-my-zsh
-  
+export ZSH=/Users/inke/.oh-my-zsh
+
 # environment variables often used.
 
-export qqi=/sdcard/tencent/QQ_Images/
-export qqf=/sdcard/tencent/QQfile_recv/
-export trunk=http://10.60.81.25/svn/myandroid/trunk/dev_webview/trunk
-export myb=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/tao_dev
-export mb=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/tao_dev
-export x5=http://10.60.81.25/svn/myandroid/trunk/dev_webview/branches_dev/dev_cmb_x5
-export st=/home/tao/template_svn
+# Alias
+alias sp='ssh -D 10800 58e0f59f2d52719871000056@python-hetao.rhcloud.com'
+alias rp='rm .git/hooks/pre-commit'
+alias gst='git status'
+alias gca='git commit -a -m'
+alias dbg='adb logcat -s "htdebug"'
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -59,38 +62,29 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode svn adb)
+plugins=(git vi-mode adb)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export JAVA_HOME=/usr/lib/jvm/jdk1.5.0_22
-#export JAVA_HOME=/usr/lib/jvm/java-8u77-sun
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
-export PATH=${JAVA_HOME}/bin:$PATH:$HOME/android-sdk-linux/platform-tools/:~/android_source/out/host/linux-x86/bin
-export ANDROID_PRODUCT_OUT=~/android_source/out/target/product/generic
-export GOROOT=$HOME/go
-export PATH=$PATH:~/android_source/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin
-
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='emacs'
+ else
+   export EDITOR='emacs'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -100,3 +94,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
