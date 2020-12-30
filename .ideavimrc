@@ -3,6 +3,8 @@ set scrolloff=3
 set ignorecase smartcase
 set showmode
 set history=1000
+set number
+set relativenumber
 
 let mapleader = ";"
 nmap <Leader>v <C-Q>
@@ -44,6 +46,7 @@ nnoremap <Leader>a :action GotoAction<cr>
 nnoremap <Leader>c :action GotoClass<cr>
 nnoremap <Leader>of :action GotoFile<cr>
 nnoremap <Leader>l :action FileStructurePopup<cr>
+nnoremap <Leader>h :action GotoClass<cr>
 
 " code navigation
 nnoremap <Leader>g :action GotoImplementation<cr>
@@ -82,3 +85,4 @@ nnoremap g<c-i> <c-i>
 " nnoremap / :action Find<cr>
 " but preserve ideavim search
 nnoremap g/ /
+
